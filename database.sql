@@ -56,3 +56,4 @@ create table role(
 
 describe role;
   
+  aaa
