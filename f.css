@@ -22,3 +22,6 @@ height:250px;
 border-radius:25px;
 }
 
+input[type="date"] {
+    background-color: #f6f6f6;
+}
