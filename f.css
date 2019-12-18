@@ -6,7 +6,19 @@ table
 {
 position: absolute;
 left: 50%;
-top: 20%;
+top: 30%;
 transform: translate(-50%,-50%);
+}
+.outer{
+border : 1px solid black;
+width:50%;
+
+text-align:center;
+padding: 20px; 
+margin:auto;
+background-color:rgb(255, 255, 255);
+left: 50%;
+height:250px;
+border-radius:25px;
 }
 
