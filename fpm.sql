@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 13, 2019 at 07:02 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.2
+-- Host: localhost
+-- Generation Time: Dec 19, 2019 at 10:46 AM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `fpm`
 --
-CREATE DATABASE IF NOT EXISTS `fpm` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `fpm`;
 
 -- --------------------------------------------------------
 
@@ -30,16 +28,14 @@ USE `fpm`;
 -- Table structure for table `achievements`
 --
 
-DROP TABLE IF EXISTS `achievements`;
-CREATE TABLE IF NOT EXISTS `achievements` (
+CREATE TABLE `achievements` (
   `gmail` varchar(50) NOT NULL,
   `year` year(4) NOT NULL,
   `date` date NOT NULL,
   `achievement_name` varchar(100) NOT NULL,
   `type` varchar(20) NOT NULL,
   `category` varchar(50) NOT NULL,
-  `staff_name` varchar(50) NOT NULL,
-  PRIMARY KEY (`gmail`,`achievement_name`)
+  `staff_name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -48,15 +44,33 @@ CREATE TABLE IF NOT EXISTS `achievements` (
 -- Table structure for table `experience`
 --
 
-DROP TABLE IF EXISTS `experience`;
-CREATE TABLE IF NOT EXISTS `experience` (
+CREATE TABLE `experience` (
   `gmail` varchar(50) NOT NULL,
-  `previous_exp` int(11) DEFAULT '0',
-  `teaching_exp` int(11) DEFAULT '0',
-  `research_exp` int(11) DEFAULT '0',
-  `industry_exp` int(11) DEFAULT '0',
-  `other_exp` varchar(300) DEFAULT NULL,
-  PRIMARY KEY (`gmail`)
+  `teaching_exp` int(11) DEFAULT 0,
+  `research_exp` int(11) DEFAULT 0,
+  `industry_exp` int(11) DEFAULT 0,
+  `other_exp` varchar(300) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `journals`
+--
+
+CREATE TABLE `journals` (
+  `gmail` varchar(255) NOT NULL,
+  `internationaljour` int(11) NOT NULL,
+  `nationaljour` int(11) NOT NULL,
+  `internationalconf` int(11) NOT NULL,
+  `nationalconf` int(11) NOT NULL,
+  `undergraduatestu` int(11) NOT NULL,
+  `postgraduatestu` int(11) NOT NULL,
+  `phdstu` int(11) NOT NULL,
+  `projects` int(11) NOT NULL,
+  `patents` int(11) NOT NULL,
+  `noofbooks` int(11) NOT NULL,
+  `techtransfer` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -65,11 +79,9 @@ CREATE TABLE IF NOT EXISTS `experience` (
 -- Table structure for table `membership`
 --
 
-DROP TABLE IF EXISTS `membership`;
-CREATE TABLE IF NOT EXISTS `membership` (
+CREATE TABLE `membership` (
   `gmail` varchar(50) NOT NULL,
-  `field_of_membership` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`gmail`)
+  `field_of_membership` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -78,8 +90,7 @@ CREATE TABLE IF NOT EXISTS `membership` (
 -- Table structure for table `profile`
 --
 
-DROP TABLE IF EXISTS `profile`;
-CREATE TABLE IF NOT EXISTS `profile` (
+CREATE TABLE `profile` (
   `gmail` varchar(50) NOT NULL,
   `sno` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -89,9 +100,7 @@ CREATE TABLE IF NOT EXISTS `profile` (
   `qualification` varchar(300) NOT NULL,
   `doj` date NOT NULL,
   `password` varchar(50) NOT NULL,
-  `phno` varchar(15) NOT NULL,
-  PRIMARY KEY (`gmail`),
-  UNIQUE KEY `sno` (`sno`)
+  `phno` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -104,15 +113,27 @@ INSERT INTO `profile` (`gmail`, `sno`, `name`, `designation`, `department`, `dob
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `publications`
+--
+
+CREATE TABLE `publications` (
+  `gmail` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `conferencename` text NOT NULL,
+  `category` varchar(20) NOT NULL,
+  `academic` year(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `role`
 --
 
-DROP TABLE IF EXISTS `role`;
-CREATE TABLE IF NOT EXISTS `role` (
+CREATE TABLE `role` (
   `gmail` varchar(50) NOT NULL,
   `role_of_faculty` varchar(50) DEFAULT NULL,
-  `duration` int(11) DEFAULT NULL,
-  PRIMARY KEY (`gmail`)
+  `duration` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -121,14 +142,65 @@ CREATE TABLE IF NOT EXISTS `role` (
 -- Table structure for table `specialization`
 --
 
-DROP TABLE IF EXISTS `specialization`;
-CREATE TABLE IF NOT EXISTS `specialization` (
+CREATE TABLE `specialization` (
   `gmail` varchar(50) NOT NULL,
   `area_of_specialization` varchar(300) DEFAULT NULL,
-  `UG` varchar(300) DEFAULT NULL,
-  `PG` varchar(300) DEFAULT NULL,
-  PRIMARY KEY (`gmail`)
+  `ug` varchar(300) DEFAULT NULL,
+  `pg` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `achievements`
+--
+ALTER TABLE `achievements`
+  ADD PRIMARY KEY (`gmail`,`achievement_name`);
+
+--
+-- Indexes for table `experience`
+--
+ALTER TABLE `experience`
+  ADD PRIMARY KEY (`gmail`);
+
+--
+-- Indexes for table `journals`
+--
+ALTER TABLE `journals`
+  ADD PRIMARY KEY (`gmail`);
+
+--
+-- Indexes for table `membership`
+--
+ALTER TABLE `membership`
+  ADD PRIMARY KEY (`gmail`);
+
+--
+-- Indexes for table `profile`
+--
+ALTER TABLE `profile`
+  ADD PRIMARY KEY (`gmail`),
+  ADD UNIQUE KEY `sno` (`sno`);
+
+--
+-- Indexes for table `publications`
+--
+ALTER TABLE `publications`
+  ADD PRIMARY KEY (`gmail`,`title`);
+
+--
+-- Indexes for table `role`
+--
+ALTER TABLE `role`
+  ADD PRIMARY KEY (`gmail`);
+
+--
+-- Indexes for table `specialization`
+--
+ALTER TABLE `specialization`
+  ADD PRIMARY KEY (`gmail`);
 
 --
 -- Constraints for dumped tables
@@ -141,10 +213,22 @@ ALTER TABLE `experience`
   ADD CONSTRAINT `experience_ibfk_1` FOREIGN KEY (`gmail`) REFERENCES `profile` (`gmail`);
 
 --
+-- Constraints for table `journals`
+--
+ALTER TABLE `journals`
+  ADD CONSTRAINT `journals_ibfk_1` FOREIGN KEY (`gmail`) REFERENCES `profile` (`gmail`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `membership`
 --
 ALTER TABLE `membership`
   ADD CONSTRAINT `membership_ibfk_1` FOREIGN KEY (`gmail`) REFERENCES `profile` (`gmail`);
+
+--
+-- Constraints for table `publications`
+--
+ALTER TABLE `publications`
+  ADD CONSTRAINT `publications_ibfk_1` FOREIGN KEY (`gmail`) REFERENCES `profile` (`gmail`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `role`
@@ -157,40 +241,6 @@ ALTER TABLE `role`
 --
 ALTER TABLE `specialization`
   ADD CONSTRAINT `specialization_ibfk_1` FOREIGN KEY (`gmail`) REFERENCES `profile` (`gmail`);
-
-
---
--- Metadata
---
-USE `phpmyadmin`;
-
---
--- Metadata for table achievements
---
-
---
--- Metadata for table experience
---
-
---
--- Metadata for table membership
---
-
---
--- Metadata for table profile
---
-
---
--- Metadata for table role
---
-
---
--- Metadata for table specialization
---
-
---
--- Metadata for database fpm
---
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
