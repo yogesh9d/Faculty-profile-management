@@ -272,7 +272,7 @@ input[type="text"]:placeholder {
   content: "";
   transition: width 0.2s;
 }
- 
+  
 .underlineHover:hover {
   color: #000000;
 }
