@@ -1,0 +1,146 @@
+
+<!DOCKTYPE HTML>
+<head> <title> Login-anits</title>    
+    <link rel="shortcut icon" href="logo.jpg"/>
+    <link rel="stylesheet" type="text/css" href="DataRetrieval.css">
+
+
+</head>
+<body> 
+    
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active active1" > Specifications</h2>
+
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+
+    <!-- Excel sheet generation Form -->
+     <form>
+      <!-- <input type="password" id="password" class="fadeIn third" name="password" placeholder="password"> -->
+
+      <input type="checkbox" id="name" class="fadeIn second" name="Name" placeholder="Name" > Name </input>
+      <input type="checkbox" id="sno" class="fadeIn second rightalign" name="sno" placeholder="sno"> Serial number </input>
+      <br></br>
+
+      <input type="checkbox" id="gmail" class="fadeIn second" name="Gmail" placeholder="Gmail" > Gmail </input>
+      <input type="checkbox" id="designation" class="fadeIn second rightalign" name="Designation" placeholder="Name" >Designation </input>
+      <br></br>
+      <input type="checkbox" id="name" class="fadeIn second" name="Name" placeholder="Name" > Name </input>
+      <input type="checkbox" id="name" class="fadeIn second rightalign" name="Name" placeholder="Name"> Name </input>
+      
+      
+      <!-- <input type = "button"  value="Generate"> </input> -->
+
+      <input type="submit" class="fadeIn fourth active3" value="Generate">
+
+      
+    </form>
+
+    <!-- Remind Passowrd -->
+    <!-- <div id="formFooter">
+      <a class="underlineHover" href="Forgotpassword.html">Forgot Password?</a>
+    </div> -->
+
+  </div>
+</div>
+    </div></body>
+    
+<!--
+      mysql> show tables;
++----------------+
+| Tables_in_fpm  |
++----------------+
+| achievements   |
+| experience     |
+| membership     |
+| profile        |
+| role           |
+| specialization |
++----------------+
+6 rows in set (0.00 sec)
+
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| gmail         | varchar(50)  | NO   | PRI | NULL    |       |
+| sno           | int(11)      | NO   | UNI | NULL    |       |
+| name          | varchar(100) | NO   |     | NULL    |       |
+| designation   | varchar(100) | NO   |     | NULL    |       |
+| department    | varchar(100) | NO   |     | NULL    |       |
+| dob           | date         | NO   |     | NULL    |       |
+| qualification | varchar(300) | NO   |     | NULL    |       |
+| doj           | date         | NO   |     | NULL    |       |
+| password      | varchar(50)  | NO   |     | NULL    |       |
+| phno          | varchar(15)  | NO   |     | NULL    |       |
++---------------+--------------+------+-----+---------+-------+
+10 rows in set (0.00 sec)
+
+mysql> describe achievements;
++------------------+--------------+------+-----+---------+-------+
+| Field            | Type         | Null | Key | Default | Extra |
++------------------+--------------+------+-----+---------+-------+
+| gmail            | varchar(50)  | NO   | PRI | NULL    |       |
+| year             | year(4)      | NO   |     | NULL    |       |
+| date             | date         | NO   |     | NULL    |       |
+| achievement_name | varchar(100) | NO   | PRI | NULL    |       |
+| type             | varchar(20)  | NO   |     | NULL    |       |
+| category         | varchar(50)  | NO   |     | NULL    |       |
+| staff_name       | varchar(50)  | NO   |     | NULL    |       |
++------------------+--------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> describe experience;
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| gmail        | varchar(50)  | NO   | PRI | NULL    |       |
+| previous_exp | int(11)      | YES  |     | 0       |       |
+| teaching_exp | int(11)      | YES  |     | 0       |       |
+| research_exp | int(11)      | YES  |     | 0       |       |
+| industry_exp | int(11)      | YES  |     | 0       |       |
+| other_exp    | varchar(300) | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> describe membership;
++---------------------+--------------+------+-----+---------+-------+
+| Field               | Type         | Null | Key | Default | Extra |
++---------------------+--------------+------+-----+---------+-------+
+| gmail               | varchar(50)  | NO   | PRI | NULL    |       |
+| field_of_membership | varchar(100) | YES  |     | NULL    |       |
++---------------------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> describe profile;
+
+
+mysql> describe role;
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| gmail           | varchar(50) | NO   | PRI | NULL    |       |
+| role_of_faculty | varchar(50) | YES  |     | NULL    |       |
+| duration        | int(11)     | YES  |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> describe specalization;
+ERROR 1146 (42S02): Table 'fpm.specalization' doesn't exist
+mysql> describe specalization^[[B    
+
+^C
+mysql> describe specialization;
++------------------------+--------------+------+-----+---------+-------+
+| Field                  | Type         | Null | Key | Default | Extra |
++------------------------+--------------+------+-----+---------+-------+
+| gmail                  | varchar(50)  | NO   | PRI | NULL    |       |
+| area_of_specialization | varchar(300) | YES  |     | NULL    |       |
+| UG                     | varchar(300) | YES  |     | NULL    |       |
+| PG                     | varchar(300) | YES  |     | NULL    |       |
++------------------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+    -->
