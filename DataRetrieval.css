@@ -84,6 +84,7 @@ input[type="reset"] {
   background-color: #56baed;
   border: none;
   color: white;
+  
   padding: 15px 80px;
   text-align: center;
   text-decoration: none;
@@ -94,7 +95,7 @@ input[type="reset"] {
   box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
-  margin: 5px 26% 40px 26%;
+  margin: 30px 26% 20px 33.5%;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -222,8 +223,9 @@ input[type="text"]:placeholder {
 }
 
 .fadeIn {
-  padding-left: 10%;
+  /* padding-left: 10%; */
   opacity: 0;
+  /* align- */
   -webkit-animation: fadeIn ease-in 1;
   -moz-animation: fadeIn ease-in 1;
   animation: fadeIn ease-in 1;
@@ -272,7 +274,7 @@ input[type="text"]:placeholder {
   content: "";
   transition: width 0.2s;
 }
-  
+
 .underlineHover:hover {
   color: #000000;
 }
@@ -295,7 +297,7 @@ input[type="text"]:placeholder {
   box-sizing: border-box;
 }
 .active1 {
-  margin-left: 39%;
+  margin-left: 40.5%;
   /* margin-right: auto; */
   /* -webkit-box-align: center; */
 }
@@ -306,13 +308,70 @@ input[type="text"]:placeholder {
 }
 
 .active3 {
-  /* border-left-width: 1000px; */
-  
-  /* padding-left: 1000px; */
+      /* float: left; */
 }
 
-.rightalign{
-   margin-left: 40%;
-  /* float: right; */
+.rightalign {
+  margin-left: 230px;
+  /* margin-right: 5px; */
 
+  /* float: right; */
+  /* float: right; */
+}
+
+.collapsible {
+  background-color: #56baed;
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(190, 190, 190, 0.4);
+  box-shadow: 0 10px 30px 0 rgba(184, 184, 184, 0.4);
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  /* margin: 5px  40px 26%; */
+
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  /* background-color: #777; */
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+
+.activecoll,
+.collapsible:hover {
+  /* background-color: #555; */
+}
+
+.collapsible:after {
+  content: "\002B";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.activecoll:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #eeeeee;
 }
