@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `fpm` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `fpm`;
 -- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: fpm
@@ -159,7 +157,7 @@ CREATE TABLE `profile` (
 
 LOCK TABLES `profile` WRITE;
 /*!40000 ALTER TABLE `profile` DISABLE KEYS */;
-INSERT INTO `profile` VALUES ('pranitha.cse@anits.edu.in',0,'Pranitha Gadde','ASSISTANT PROFESSOR','CSE','1987-08-05','M.Tech','2012-06-06','admin','9177755811'),('sivaranjani.cse@anits.edu.in',1,'DR. R.SIVARANJINI','HOD & PROFESSOR','CSE','1979-02-11','M.TECH,Ph.D','2016-06-11','admin','9642022170');
+INSERT INTO `profile` VALUES ('	Sivajyothi.cse@anits.edu.in',6,'Mrs. B. Siva Jyothi','ASSISTANT PROFESSOR','CSE','1986-03-08','M.TECH','2016-12-10','admin','	9032992384'),('anitha.cse@anits.edu.in',4,'T.Anitha','ASSISTANT PROFESSOR','CSE','1991-05-05','	B.Tech(CSE), M.Tech (CSE)','2016-06-01','admin','7799123311'),('gayathri.ganivada@gmail.com',2,'G V Gayathri','ASSISTANT PROFESSOR','CSE','1987-05-20','B.Tech,M.Tech(Ph.D.)','2009-10-19','admin','9908216500'),('iacr.santoshi@gmail.com',3,'G.Santoshi','ASSISTANT PROFESSOR','CSE','1987-05-09','B.Tech,M.Tech(pursuing)','2011-05-10','admin','8500925079'),('joshua.cse@anits.edu.in',5,'S.Joshua Johnson','ASSISTANT PROFESSOR','CSE','1991-07-22','M.Tech(CSE)','2016-06-06','admin','9573382650'),('pranitha.cse@anits.edu.in',0,'Pranitha Gadde','ASSISTANT PROFESSOR','CSE','1987-08-05','M.Tech','2012-06-06','admin','9177755811'),('sivaranjani.cse@anits.edu.in',1,'DR. R.SIVARANJINI','HOD & PROFESSOR','CSE','1979-02-11','M.TECH,Ph.D','2016-06-11','admin','9642022170');
 /*!40000 ALTER TABLE `profile` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -250,4 +248,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-27 22:58:12
+-- Dump completed on 2020-01-27 23:10:29
