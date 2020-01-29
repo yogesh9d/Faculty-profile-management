@@ -129,7 +129,8 @@ $constraints = "";
 
 function addc($group, $constraint)
 {
-  if ($_POST[$constraint]) {
+  if ($_POST[$constraint] = 'yes') {
+    // echo $constraint;
     global $constraints;
     if (strlen($constraints) == 0) {
       $constraints = $constraints . $group . "." . $constraint;
@@ -148,10 +149,6 @@ addc("profile", "dob");
 addc("profile", "doj");
 addc("profile", "qualification");
 addc("profile", "phno");
-
-
-// addc("profile", "name");
-// addc("profile", "name");
 
 // if ($_POST['sno'])
 //   $constraints = $constraints . " profile.sno, ";
@@ -172,6 +169,26 @@ addc("profile", "phno");
 // if ($_POST['phno'])
 //   $constraints = $constraints . " profile.phno, ";
 
+// addc("achievements", "achievement_name");
+// addc("achievements", "type");
+// addc("achievements", "category");
+
+// if($_POST['period'] = 'yes'){
+//   addc("achievements", "year_start");
+//   addc("achievements", "year_end");
+// }
+
+
+addc("experience", "teaching_exp");
+addc("experience", "research_exp");
+addc("experience", "industry_exp");
+addc("experience", "other_exp");
+
+addc("membership", "field_of_membership");
+
+addc("specialization", "area_of_specialization");
+addc("specialization", "ug");
+addc("specialization", "pg");
 
 
 
