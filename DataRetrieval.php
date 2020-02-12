@@ -13,6 +13,7 @@ session_start();
 //     orderNumber, status, orderDate, requiredDate, comments
 // FROM
 //     orders
+
 // WHERE
 //     status = 'Cancelled'
 // INTO OUTFILE 'C:/tmp/cancelled_orders.csv'
