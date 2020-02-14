@@ -13,7 +13,6 @@ session_start();
 //     orderNumber, status, orderDate, requiredDate, comments
 // FROM
 //     orders
-
 // WHERE
 //     status = 'Cancelled'
 // INTO OUTFILE 'C:/tmp/cancelled_orders.csv'
@@ -130,16 +129,18 @@ $constraints = "";
 
 function addc($group, $constraint)
 {
-  if ($_POST[$constraint] = 'yes') {
-    // echo $constraint;
-    global $constraints;
-    if (strlen($constraints) == 0) {
-      $constraints = $constraints . $group . "." . $constraint;
-    } else {
-      $constraints = $constraints . ", " . $group . "." . $constraint;
+
+    $var = $_POST[$constraint];
+    if(isset($var)){
+        global $constraints;
+        if (strlen($constraints) == 0) {
+            $constraints = $constraints . $group . "." . $constraint;
+        } else {
+            $constraints = $constraints . ", " . $group . "." . $constraint;
+        }
     }
-  }
 }
+
 
 addc("profile", "sno");
 addc("profile", "name");
@@ -180,20 +181,20 @@ addc("profile", "phno");
 // }
 
 
-addc("experience", "teaching_exp");
-addc("experience", "research_exp");
-addc("experience", "industry_exp");
-addc("experience", "other_exp");
+// addc("experience", "teaching_exp");
+// addc("experience", "research_exp");
+// addc("experience", "industry_exp");
+// addc("experience", "other_exp");
 
-addc("membership", "field_of_membership");
+// addc("membership", "field_of_membership");
 
-addc("specialization", "area_of_specialization");
-addc("specialization", "ug");
-addc("specialization", "pg");
-
-
+// addc("specialization", "area_of_specialization");
+// addc("specialization", "ug");
+// addc("specialization", "pg");
 
 
+
+
 // if ($_POST['gmail'])
 //   $constraints = $constraints . " profile.gmail ";
 // if ($_POST['gmail'])
@@ -222,8 +223,9 @@ addc("specialization", "pg");
 //   $constraints = $constraints . " profile.gmail ";
 
 
-if (strlen($constraints) == 0)
-  echo "NONE SELECTED";
+if (strlen($constraints) == 0) {
+    echo "NONE SELECTED";
+}
 
 $query = "SELECT " . $constraints . " FROM profile
 LEFT JOIN publications ON profile.gmail = publications.gmail
@@ -247,19 +249,19 @@ $columns_total = mysqli_num_fields($sql);
 // Get The Field Name
 
 for ($i = 0; $i < $columns_total; $i++) {
-  // $heading = mysqli_field_name($sql, $i);
-  $heading = mysqli_fetch_field_direct($sql, $i)->name;
-  $output .= '"' . $heading . '",';
+    // $heading = mysqli_field_name($sql, $i);
+    $heading = mysqli_fetch_field_direct($sql, $i)->name;
+    $output .= '"' . $heading . '",';
 }
 $output .= "\n";
 
 // Get Records from the table
 
 while ($row = mysqli_fetch_array($sql)) {
-  for ($i = 0; $i < $columns_total; $i++) {
-    $output .= '"' . $row["$i"] . '",';
-  }
-  $output .= "\n";
+    for ($i = 0; $i < $columns_total; $i++) {
+        $output .= '"' . $row["$i"] . '",';
+    }
+    $output .= "\n";
 }
 
 // Download the file
