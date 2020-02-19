@@ -4,20 +4,21 @@
     <head>
         <title> Login-anits</title>
         <link rel="shortcut icon" href="logo.jpg" />
-        <link rel="stylesheet" type="text/css" href="Download.css">
+        <link rel="stylesheet" type="text/css" href="Download1.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
     </head>
 
     <body>
 
-        <div>
+        <div class = "items">
 
+
+
+
+
+        <div class = "boxed">
             <h2 class="h2x active active1">Profile Details</h2>
-
-        </div>
-
-        <div class = "boxed ">
             <?php
                 $array = array(
                   'Email' => 'gmail','Sno.' => 'sno','Name' => 'name',
@@ -152,10 +153,7 @@
 
                 //***************************************************************************/
 
-
-
-
-                // sideheading("General");
+                sideheading("Profile");
 
                 put_attrib("profile", $id, $profile);
 
@@ -187,13 +185,10 @@
 
                 put_memberships('membership', $id);
 
-
-
-
                 //*****************************************************************************/
             ?>
         </div>
-
+   </div>
     </body>
 
 </html>
