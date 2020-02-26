@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 28, 2020 at 07:22 PM
+-- Generation Time: Feb 26, 2020 at 05:55 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -29,13 +29,13 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `achievements` (
-  `gmail` varchar(50) NOT NULL,
-  `year_start` year(4) NOT NULL,
-  `year_end` year(4) NOT NULL,
+  `gmail` varchar(100) NOT NULL,
+  `year_start` varchar(100) NOT NULL,
+  `date_start` date NOT NULL,
   `achievement_name` varchar(100) NOT NULL,
-  `type` varchar(20) NOT NULL,
-  `category` varchar(50) NOT NULL,
-  `staff_name` varchar(50) NOT NULL
+  `type` varchar(100) NOT NULL,
+  `category` varchar(100) NOT NULL,
+  `staff_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -91,6 +91,24 @@ INSERT INTO `journals` (`gmail`, `internationaljour`, `nationaljour`, `internati
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `userid` varchar(20) NOT NULL,
+  `pwd` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`userid`, `pwd`) VALUES
+('sp@gmail.com', 'surya');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `membership`
 --
 
@@ -125,7 +143,7 @@ INSERT INTO `profile` (`gmail`, `sno`, `name`, `designation`, `department`, `dob
 ('pranitha@gmail.com', 9, 'pranitha', 'asst.prof', 'cse', '1987-08-05', 'M.tech', '2012-06-06', '9177755811'),
 ('pratap@gmail', 7, 'pratap', 'aba', 'case', '2000-05-22', 'phd', '2009-03-24', '9908124098'),
 ('sivaranjani.cse@anits.edu.in', 1, 'DR. R.SIVARANJINI', 'HOD & PROFESSOR', 'CSE', '1979-02-11', 'M.TECH,Ph.D', '2016-06-11', '9642022170'),
-('sp@gmail.com', 8, 'sp', 'hod', 'cse', '2000-02-22', 'phd', '2013-02-23', '9908214650'),
+('sp@gmail.com', 8, 'sp', 'hod', 'cse', '2000-02-22', 'phd', '2013-02-23', '9908124098'),
 ('srinu6@gmail.com', 6, 'CHALUMURI SURYAPRATAP', 'ahd', 'cse', '2000-03-12', 'asaa', '2010-02-20', '5696964563'),
 ('surya3@gmail.com', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('surya4@gmail.com', 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -232,6 +250,12 @@ ALTER TABLE `experience`
 --
 ALTER TABLE `journals`
   ADD PRIMARY KEY (`gmail`);
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`userid`);
 
 --
 -- Indexes for table `membership`
