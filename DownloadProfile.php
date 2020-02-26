@@ -101,7 +101,7 @@ error_reporting(E_ALL & ~E_NOTICE);
                     if($row[$array[$attrib]])
                     echo "<p class = \"valstyle clear\">". $row[$array[$attrib]] ."</p>";
                     if($attrib == "Designation"){
-                        echo "<img class = \"x\" src = img/" .$id . ".jpg></img>";
+                        echo "<img class = \"x\" src = " .$id . ".jpg height = \"220\" width = \"220\"></img>";
                     }
 
                     echo "</div>";
