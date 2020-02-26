@@ -2,9 +2,9 @@
 <html>
 
     <head>
-        <title> Login-anits</title>
+        <title> Download profile</title>
         <link rel="shortcut icon" href="logo.jpg" />
-        <link rel="stylesheet" type="text/css" href="Download1.css">
+        <link rel="stylesheet" type="text/css" href="Download2.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
     </head>
@@ -12,10 +12,6 @@
     <body>
 
         <div class = "items">
-
-
-
-
 
         <div class = "boxed">
             <h2 class="h2x active active1">Profile Details</h2>
@@ -65,8 +61,13 @@
                 or die("database cannot be selected <br>");
 
                 //***************************************************************************/
-
-                $id = "sivaranjani.cse@anits.edu.in";
+error_reporting(E_ALL & ~E_NOTICE);
+                // $id = "sivaranjani.cse@anits.edu.in";
+                $id="";
+                if(isset($_GET['id'])){
+                    $id = $_GET['id'];
+                    // echo $id;
+                }
 
                 $profile = array("Name", "Designation", "Department", "DOB", "Qualification", "DOJ", "Email", "Phone Number");
                 $experience = array("Teaching", "Research", "Industry", "Other");
@@ -97,6 +98,7 @@
 
                     echo "<div>";
                     echo "<p class = \"attribstyle clear\">". $attrib ." : </p>";
+                    if($row[$array[$attrib]])
                     echo "<p class = \"valstyle clear\">". $row[$array[$attrib]] ."</p>";
                     if($attrib == "Designation"){
                         echo "<img class = \"x\" src = img/" .$id . ".jpg></img>";
