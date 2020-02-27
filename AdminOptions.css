@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 
 /* BASIC */
 
@@ -13,7 +13,6 @@ body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
 }
-
 
 a {
   color: #92badd;
@@ -41,20 +40,21 @@ h2 {
   justify-content: center;
   width: 100%;
   min-height: 100%;
-  padding: 10px;
+  padding: 20px;
 }
 
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
   background: #fff;
-  /* padding: 30px; */
+  padding: 30px;
   width: 90%;
-  max-width: 800px;
+  max-width: 450px;
   position: relative;
-  padding: 25px;
+  padding: 0px;
   -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
 #formFooter {
@@ -85,7 +85,6 @@ input[type="reset"] {
   background-color: #56baed;
   border: none;
   color: white;
-
   padding: 15px 80px;
   text-align: center;
   text-decoration: none;
@@ -96,7 +95,7 @@ input[type="reset"] {
   box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
-  margin: 30px 26% 20px 33.5%;
+  margin: 5px 20px 40px 20px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -120,8 +119,50 @@ input[type="reset"]:active {
   transform: scale(0.95);
 }
 
+select {
+  background-color: #f6f6f6;
+  border: none;
+  align-items: center;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+option {
+  background-color: #f6f6f6;
+  border: none;
+  align-items: center;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
 input[type="text"] {
-  align-self: left;
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
@@ -141,13 +182,25 @@ input[type="text"] {
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
 }
-input[type="checkbox"] {
+input[type="password"] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
   text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
 }
 
 input[type="text"]:focus {
@@ -157,44 +210,6 @@ input[type="text"]:focus {
 
 input[type="text"]:placeholder {
   color: #cccccc;
-}
-
-/* ANIMATIONS */
-
-/* Simple CSS3 Fade-in-down Animation */
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-  /* -webkit-animation-duration: 1s; */
-  /* animation-duration: 1s; */
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
 }
 
 /* Simple CSS3 Fade-in Animation */
@@ -224,9 +239,7 @@ input[type="text"]:placeholder {
 }
 
 .fadeIn {
-  /* padding-left: 10%; */
   opacity: 0;
-  /* align- */
   -webkit-animation: fadeIn ease-in 1;
   -moz-animation: fadeIn ease-in 1;
   animation: fadeIn ease-in 1;
@@ -297,82 +310,24 @@ input[type="text"]:placeholder {
 * {
   box-sizing: border-box;
 }
-.active1 {
-  margin-left: 40.5%;
-  /* margin-right: auto; */
-  /* -webkit-box-align: center; */
-}
-.active2 {
-  padding-left: ;
-  /* margin-right: auto; */
-  /* -webkit-box-align: center; */
-}
 
-.active3 {
-      /* float: left; */
-}
+.transpose {
+  opacity: 0;
+  -webkit-animation: fadeIn 1;
+  -moz-animation: fadeIn 1;
+  animation: fadeIn 1;
 
-.rightalign {
-  margin-left: 230px;
-  /* margin-right: 5px; */
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 
-  /* float: right; */
-  /* float: right; */
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
 }
 
-.collapsible {
-  background-color: #56baed;
-  border: none;
-  color: white;
-  padding: 15px 80px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 13px;
-  -webkit-box-shadow: 0 10px 30px 0 rgba(190, 190, 190, 0.4);
-  box-shadow: 0 10px 30px 0 rgba(184, 184, 184, 0.4);
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
-  /* margin: 5px  40px 26%; */
-
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  /* background-color: #777; */
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: center;
-  outline: none;
-  font-size: 15px;
+.transpose.first {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
-
-.activecoll,
-.collapsible:hover {
-  /* background-color: #555; */
-}
-
-.collapsible:after {
-  content: "\002B";
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.activecoll:after {
-  content: "\2212";
-}
-
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #eeeeee;
-} */

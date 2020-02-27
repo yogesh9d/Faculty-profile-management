@@ -56,7 +56,7 @@
                         // continue;
                         echo "<tr><td>";
                         echo "<center>" . $row['sno'] . "</center></td>";
-                        echo "<td><img src = " .$row['gmail'] . ".jpg height=\"150\" width=\"150\" ></td>";
+                        echo "<td><img src = img/" .$row['gmail'] . ".jpg height=\"150\" width=\"150\" ></td>";
                         echo "<td>" . $row['name'] . "</td>";
                         echo "<td>" . $row['designation'] . "</td>";
                         echo "<td>" . $row['qualification'] . "</td>";
@@ -74,6 +74,8 @@
                         echo "<td><a href=\"DownloadProfile.php? id=" . $row['gmail'] ."\">More</a></td>";
                         echo "</tr>";
                     }
+
+                    
 
                 }
 
