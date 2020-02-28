@@ -4,7 +4,7 @@
     <head>
         <title>Pofiles List</title>
         <link rel="shortcut icon" href="logo.jpg" />
-        <link rel="stylesheet" type="text/css" href="f.css">
+        <link rel="stylesheet" type="text/css" href="ProfilesList.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <br>
@@ -75,7 +75,7 @@
                         echo "</tr>";
                     }
 
-                    
+
 
                 }
 
