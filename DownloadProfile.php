@@ -4,7 +4,7 @@
     <head>
         <title> Download profile</title>
         <link rel="shortcut icon" href="logo.jpg" />
-        <link rel="stylesheet" type="text/css" href="Download2.css">
+        <link rel="stylesheet" type="text/css" href="DownloadProfile.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
     </head>
