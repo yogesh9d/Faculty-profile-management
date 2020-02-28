@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+	<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+	<!-- [if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif] -->
+
+	<style>
+		/* Style The Dropdown Button */
+		.dropbtn {
+			background-color: rgba(83, 83, 83, 0);
+			color: white;
+			font-family: 'Didact Gothic', sans-serif;
+			/* padding: 16px; */
+			/* font-size: 16px; */
+			border: none;
+			/* padding: 1em 1.5em; */
+			letter-spacing: 1px;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 0.8em;
+			color: rgba(255, 255, 255, 0.80);
+			cursor: pointer;
+		}
+
+		/* The container <div> - needed to position the dropdown content */
+		.dropdown {
+			position: relative;
+			display: inline-block;
+			/* align-self: center; */
+
+			border-radius: 25px;
+		}
+
+		/* Dropdown Content (Hidden by Default) */
+		.dropdown-content {
+			text-align: center;
+			display: none;
+			position: absolute;
+			background-color: #5f5f5f;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			border-radius: 25px;
+			z-index: 1;
+		}
+
+		/* Links inside the dropdown */
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+
+		/* Change color of dropdown links on hover */
+		.dropdown-content a:hover {
+			background-color: #a5a5a5;
+			border-radius: 25px;
+
+		}
+
+		/* Show the dropdown menu on hover */
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		/* Change the background color of the dropdown button when the dropdown content is shown */
+		.dropdown:hover .dropbtn {
+			background-color: #49494900;
+		}
+	</style>
+
+
+
+</head>
+
+<body>
+	<div id="header-wrapper">
+		<div id="header" class="container" style="padding: 100px 0px; width: 95%;">
+			<div id="logo">
+				<h1><a href="#">Faculty Profiles</a></h1>
+			</div>
+			<div id="menu" style="padding-right: 120px;">
+				<ul>
+					<li class="active"><a href="#" accesskey="1" title="">Homepage</a></li>
+					<li><a href="ProfilesList.php" accesskey="2" title="">Profiles</a></li>
+					<li><a href="DataRetrieval.html" accesskey="3" title="">Generate excel</a></li>
+					<div class="dropdown">
+						<button class="dropbtn">Login</button>
+						<div class="dropdown-content">
+							<a href="#">Faculty</a>
+							<a href="AdminLogin.php">Admin</a>
+
+						</div>
+					</div>
+					<!-- <li><a href="" accesskey="5" title="">Login</a></li> -->
+				</ul>
+			</div>
+		</div>
+		<!-- <div id="banner" class="container">
+		<div class="title">
+			<h2>Consectetuer adipiscing elit</h2>
+			<span class="byline">Donec pulvinar ullamcorper metus</span>
+		</div>
+		<ul class="actions">
+			<li><a href="#" class="button">Pulvinar mollis</a></li>
+		</ul>
+	</div> -->
+	</div>
+	<!-- <div id="wrapper">
+	<div id="three-column" class="container">
+		<div class="title">
+			<h2>Feugiat lorem ipsum dolor sed veroeros</h2>
+			<span class="byline">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue</span>
+		</div>
+		<div class="boxA">
+			<p>Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc. Praesent pellentesque facilisis elit. Class aptent taciti sociosqu ad  torquent per conubia nostra.</p>
+			<a href="#" class="button button-alt">More Info</a>
+		</div>
+		<div class="boxB">
+			<p>Etiam neque. Vivamus consequat lorem at nisl. Nullam  wisi a sem semper eleifend. Donec mattis. Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc.</p>
+			<a href="#" class="button button-alt">More Info</a>
+		</div>
+		<div class="boxC">
+			<p> Aenean lectus lorem, imperdiet at, ultrices eget, ornare et, wisi. Pellentesque adipiscing purus. Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc.</p>
+			<a href="#" class="button button-alt">More Info</a>
+		</div>
+	</div>
+</div> -->
+	<!-- <div id="welcome">
+	<div class="container">
+		<div class="title">
+			<h2>Fusce ultrices fringilla metus</h2>
+			<span class="byline">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue</span>
+		</div>
+		<p>This is <strong>Assembly</strong>, a free, fully standards-compliant CSS template designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
+		<ul class="actions">
+			<li><a href="#" class="button">Etiam posuere</a></li>
+		</ul>
+	</div>
+</div> -->
+	<div id="copyright" class="container">
+		<!-- <p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p> -->
+	</div>
+</body>
+
+</html>
