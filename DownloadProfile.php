@@ -61,7 +61,7 @@
                 or die("database cannot be selected <br>");
 
                 //***************************************************************************/
-error_reporting(E_ALL & ~E_NOTICE);
+                error_reporting(E_ALL & ~E_NOTICE);
                 // $id = "sivaranjani.cse@anits.edu.in";
                 $id="";
                 if(isset($_GET['id'])){
@@ -101,7 +101,7 @@ error_reporting(E_ALL & ~E_NOTICE);
                     if($row[$array[$attrib]])
                     echo "<p class = \"valstyle clear\">". $row[$array[$attrib]] ."</p>";
                     if($attrib == "Designation"){
-                        echo "<img class = \"x\" src = " .$id . ".jpg height = \"220\" width = \"220\"></img>";
+                        echo "<img class = \"x\" src = img/" .$id . ".jpg height = \"220\" width = \"220\"></img>";
                     }
 
                     echo "</div>";
@@ -110,27 +110,6 @@ error_reporting(E_ALL & ~E_NOTICE);
                 function sideheading($name){
                     echo "<div><p class = \"sideheadingstyle \"> " . $name . " </p></div>";
                 }
-
-                // function put_publications($table, $id, $set_of_val){
-                //     global $array, $connection;
-
-                //     echo "<div>";
-                //     foreach ($set_of_val as $attrib){
-                //         $query = "select count(*) as 'count' from " . $table . " where Gmail = '" . $id . "' and category = 'national' ;";
-
-                //         $sql = mysqli_query($connection, "$query");
-                //         $row = mysqli_fetch_array($sql);
-
-                //         echo "<p>kkkkk</p>";
-
-                //         echo "<div>";
-                //         echo "<p class = \"attribstyle clear\">". $attrib ." : </p>";
-                //         echo "<p class = \"valstyle clear\">". $row['count'] ."</p>";
-                //         echo "</div>";
-
-                //     }
-                //     echo "</div>";
-                // }
 
                 function put_memberships($table, $id){
                     global $array, $connection;

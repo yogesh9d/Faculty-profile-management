@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Acheievements by staff</title>
+<link rel="shortcut icon" href="logo.jpg"/>
 <link rel="stylesheet" type="text/css" href="1.css">
 </head>
 <body>
@@ -16,22 +17,22 @@
          <label>Type:</label><br>
     <input type="text" class="a" placeholder="  Enter type of Achievement" name="type"><br><br>
    <label>category:</label><br>
-    <input type="text" class="a" placeholder="  National/international" name="category"><br><br> 
+    <input type="text" class="a" placeholder="  National/international" name="category"><br><br>
         <label>Staff Name:</label><br>
     <input type="text" class="a" placeholder="  Enter your Name" name="staff_name"><br><br>
          <label>Year</label><br>
     <input type="text" class="a" placeholder="  YYYY-YYYY" name="year_start"><br><br>
         <label>Date:</label><br>
     <input type="date" class="a" placeholder="" name="date_start"><br><br>
-        
+
          <label>Department</label><br>
     <input type="text" class="a" placeholder="" name = "department"><br><br>
        <input type="submit" class="submit" value="submit" >
-       <button class="ach1 ach2"><a style="text-decoration: none; color: white;" href="role.php">Roles </a></button> 
+       <button class="ach1 ach2"><a style="text-decoration: none; color: white;" href="role.php">Roles </a></button>
   <!-- <p style="font-size: 30px" >Registration's Last submission</p> -->
 
-        
-        </form>    
-    </div>    
+
+        </form>
+    </div>
 </body>
 </html>
