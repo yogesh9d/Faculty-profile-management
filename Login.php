@@ -1,13 +1,13 @@
 
 <!DOCKTYPE HTML>
 <html>
-	<head> <title> Login-anits</title>
+	<head> <title>Login-anits</title>
 		<link rel="shortcut icon" href="logo.jpg"/>
 		<link rel="stylesheet" type="text/css" href="Login.css">
 	</head>
 	<body>
 
-		<div class="wrapper fadeInDown">
+		<div class="wrapper fadeIn first">
 			<div id="formContent">
 				<!-- Tabs Titles -->
 				<h2 class="active"> Sign In </h2>
@@ -86,7 +86,12 @@
 
 							// echo "<h1>". $row['userid']. $row['pwd'] . "</h1>";
 							if($row = mysqli_fetch_array($result)){
-									redirect("www.google.com");
+								$_SESSION['gmail'] = $_POST['login'];
+								if($_POST['login'] == 'admin')
+									redirect('AdminOptions.php');
+								else
+									header('location:EditableForm.php');
+
 							}
 						}
 

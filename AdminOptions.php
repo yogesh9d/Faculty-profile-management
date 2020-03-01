@@ -23,7 +23,7 @@
                         $result = mysqli_select_db($connection, $database)
                         or die("database cannot be selected <br>");
 
-                        if($_SESSION['login'] ==  "admin"){
+                        if($_SESSION['gmail'] ==  "admin"){
 
                             if(isset($_POST['sign_out_sub'])){
                                 session_destroy();
