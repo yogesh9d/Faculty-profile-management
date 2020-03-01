@@ -16,26 +16,26 @@ if($num == 1){
     // session_start();
      $row =mysqli_fetch_assoc($result);
     $_SESSION["gmail"] = $row["userid"];
-    
+
   //  echo "<form method=\"post\" action=\"dummye.php\" >";
   //  echo "<input type=\”gmail\” name=\”email\”  value=$gmail />";
-   
+
   //  echo "<form method=\"post\" action=\"dummye.php\" >";
   //  echo "<input type=\”gmail\” name=\”gmail\”  placeholder=\"re-enter your email \" />";
   //  echo "<input type=\"submit\" name=\"submit\" value=\"edit\">";
   //  echo "</form>";
-   
+
   //  function submission(){document.getElementById("submitHiddenVar").submit();// Form submission
   // }
 //    $_SESSION["uid"] = $row["uid"];
 // submission();
 //echo $gmail;
-  header('location:login2.php');  
+
+  header('location:EditableForm.php');
 }
 else{
-    echo"not registered";
-    // header('location:newregisterform.php');
-    
+    // echo"not registered";
+    header('location:FacultyLogin.html');
+
 }
 ?>
-
