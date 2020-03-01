@@ -3,7 +3,7 @@
 <head>
 <title>Acheievements by staff</title>
 <link rel="shortcut icon" href="logo.jpg"/>
-<link rel="stylesheet" type="text/css" href="Achievements.css">
+<link rel="stylesheet" type="text/css" href="Registration.css">
 </head>
 <body>
 <h1>Achievements by Staff</h1>
