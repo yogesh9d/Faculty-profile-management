@@ -1,5 +1,6 @@
 <?php
 session_start();
+if(isset($_SESSION['gmail'])){
 //Database Connection
 // include 'conn.php';
 //Get ID from Database
@@ -17,7 +18,7 @@ if(isset($_POST['gmail'])){
 //  $sql1 = "SELECT * FROM experience WHERE gmail ='$gmail'";
 //  $sql2 = "SELECT * FROM specialization WHERE gmail ='$gmail'";
 $sql = "SELECT profile.gmail,profile.name,designation,profile.department,dob,qualification,doj,phno,
-year_start,date_start,achievement_name,achievements.type,achievements.category,
+year_start,date_start,achievement_name,achievements.type ,achievements.category ,
 teaching_exp,industry_exp , research_exp , other_exp
   ,internationaljour , nationaljour , internationalconf , nationalconf , undergraduatestu , postgraduatestu , phdstu , projects , patents , noofbooks , techtransfer ,
   role_of_faculty,duration,area_of_specialization,ug,pg,
@@ -80,136 +81,50 @@ $noofbooks = $_POST['noofbooks'];
 $techtransfer = $_POST['techtransfer'];
 
 
+$rof = $_POST['role_of_faculty'];
+$duration = $_POST['duration'];
+
+
 $ptitle = $_POST['ptitle'];
 $cn= $_POST['conferencename'];
 $pcat = $_POST['category'];
 $aca = $_POST['academic'];
 
 $stitle = $_POST['stitle'];
-$type = $_POST['swc'];
-$cn= $_POST['conferencename'];
+$swc = $_POST['swc'];
 $scat = $_POST['category'];
 $place = $_POST['place'];
-
 $dat  = $_POST['date'];
 
 $year_start = $_POST['year_start'];
 $date_start = $_POST['date_start'];
 $an = $_POST['achievement_name'];
-$type = $_POST['type'];
+$atype = $_POST['type'];
 $acat = $_POST['category'];
 
 
-$rof = $_POST['role_of_faculty'];
-$duration = $_POST['duration'];
+
+ $update = "UPDATE profile,experience,specialization,role,journals,publications,workshops,achievements SET profile.department='$department',profile.name='$name',profile.designation='$designation',profile.dob='$dob',
+ profile.qualification='$qualification',profile.doj='$doj',profile.phno='$phno'
+ ,experience.teaching_exp = '$teaching', experience.industry_exp = '$industry',
+ experience.research_exp = '$research',experience.other_exp = '$others',
+area_of_specialization = '$areaofspec',ug  = '$ug_taught',pg = '$postgrad',
+role_of_faculty = '$rof',duration = '$duration',
+internationaljour = '$inj',nationaljour = '$nj',internationalconf = '$inco',nationalconf = '$nco',
+undergraduatestu = '$ugs',postgraduatestu = '$pgs',phdstu = '$phdstu',projects = '$projects',
+patents = '$patents',noofbooks = '$noofbooks',techtransfer = '$techtransfer',
+publications.title = '$ptitle', conferencename = '$cn',publications.category = '$pcat',academic = '$aca',
+workshops.title = '$stitle',workshops.swc = '$swc',workshops.category = '$scat',workshops.place = '$place',workshops.date = '$dat',
+achievement_name = '$an',date_start = '$date_start',year_start = '$year_start',achievements.type = '$atype',achievements.category = '$acat'
 
 
+ WHERE profile.gmail='$gmail' and experience.gmail='$gmail' and specialization.gmail='$gmail' and role.gmail='$gmail'
+ and journals.gmail='$gmail' and publications.gmail = '$gmail' and workshops.gmail = '$gmail' and achievements.gmail='$gmail'";
 
-//$staff_name = $_POST['staff_name'];
-//$dept = $_POST['department'];
-
-// $dob = $_POST['dob'];
-// $qualification = $_POST['qualification'];
-// $doj = $_POST['doj'];
-
-
-// $teaching = $_POST['teaching_exp'];
-// $industry = $_POST['industry_exp'];
-// $research = $_POST['research_exp'];
-// $others = $_POST['other_exp'];
-// $areaofspec = $_POST['area_of_specialization'];
-// $ug_taught = $_POST['ug'];
-// $postgrad = $_POST['pg'];
-
-echo $department;
-
-$update = "UPDATE profile, experience SET department='$department',name='$name',
- designation='$designation',dob='$dob',
- qualification='$qualification'
- doj='$doj',phno='$phno' ,
- experience.teaching_exp = '$teaching', experience.industry_exp = '$industry'
---  research_exp = '$research',others_exp = $others , area_of_specialization = $areaofspec,
---  ug  = $ug_taught,pg = $postgrad
- ";
-
-// function cmd($outer,$inner){
-//     global $update;
-//     $update .= ", ".$inner." = '".$outer."'";
-// }
-
-// cmd ('inj','internationaljour');
-// cmd ('nj','nationaljour');
-// cmd ('inco','internationalconf');
-// cmd ('nco','nationalconf');
-// cmd ('ugs','undergraduatestu');
-// cmd ('pgs','postgraduatestu');
-// cmd ('phdstu','phdstu');
-// cmd ('projects','projects');
-// cmd ('patents','patents');
-// cmd ('noofbooks','noofbooks');
-// cmd ('techtransfer','techtransfer');
-
-
-// cmd ('ptitle','ptitle');
-// cmd ('cn','conferencename');
-// cmd ('pcat','category');
-// cmd ('aca','academic');
-
-// cmd ('stitle','stitle');
-// cmd ('type','swc');
-// cmd ('cn','conferencename');
-// cmd ('scat','category');
-// cmd ('place','place');
-
-// cmd ('dat ','date');
-
-// cmd ('year_start','year_start');
-// cmd ('date_start','date_start');
-// cmd ('an','achievement_name');
-// cmd ('type','type');
-// cmd ('acat','category');
-
-
-// cmd ('rof','role_of_faculty');
-// cmd ('duration','duration');
-
-
-
-$update .=  " WHERE gmail= '$gmail';";
-
-//  $update = "UPDATE profile SET department='$department',name='$name',
-//  designation='$designation',dob='$dob',
-//  qualification='$qualification',
-//  doj='$doj',phno='$phno' , teaching_exp = '$teaching',industry_exp = '$industry',
-//  research_exp = '$research',others_exp = $others , area_of_specialization = $areaofspec,
-//  ug  = $ug_taught,pg = $postgrad,
-
-//   WHERE gmail='gmail'";
 
  $up = mysqli_query($conn, $update);
 
-//  $update1 = "UPDATE experience set teaching_exp = '$teaching',industry_exp = '$industry',research_exp = '$research',others_exp = $others where gmail = 'gmail'";
-//  $up1 = mysqli_query($conn, $update1);
 
-//  $update2 = "UPDATE specialization set area_of_specialization = $areaofspec,ug  = $ug_taught,pg = $postgrad where gmail = 'gmail'";
-//  $up2 = mysqli_query($conn, $update1);
-//  $reg = "update `profile` set (name='$fname',designation,department,dob,qualification,phno,doj) values ('$fname','$gmail','$designation','$department','$dob','$qualification','$mobile','$doj')";
-//     mysqli_query($conn,$reg);
-//     //$reg = "insert into `profile`(gmail) values ('$gmail')";
-//     $reg1 = "insert into `experience`(gmail,teaching_exp,industry_exp,research_exp,other_exp) values ('$gmail','$teaching','$industry','$research','$others')";
-//     mysqli_query($conn,$reg1);
-//     $reg2 = "insert into `specialization`(gmail,area_of_specialization,ug,pg) values ('$gmail','$areaofspec','$ug_taught','$postgrad')";
-//     mysqli_query($conn,$reg2);
-
-//  if(!isset($sql)){
-//  die ("Error $sql" .mysqli_connect_error());
-//  }
-//  else
-//  {
-//  header("location: profiledetails.php");
-//  }
-
-echo $up;
 }
 ?>
 <!--Create Edit form -->
@@ -339,3 +254,47 @@ function update(){
 </script>
 </body>
 </html>
+<?php 
+}
+?>
+
+
+
+<!-- // function cmd($outer,$inner){
+//     global $update;
+//     $update .= ", ".$inner." = '".$outer."'";
+// }
+
+// cmd ('inj','internationaljour');
+// cmd ('nj','nationaljour');
+// cmd ('inco','internationalconf');
+// cmd ('nco','nationalconf');
+// cmd ('ugs','undergraduatestu');
+// cmd ('pgs','postgraduatestu');
+// cmd ('phdstu','phdstu');
+// cmd ('projects','projects');
+// cmd ('patents','patents');
+// cmd ('noofbooks','noofbooks');
+// cmd ('techtransfer','techtransfer');
+
+
+// cmd ('ptitle','ptitle');
+// cmd ('cn','conferencename');
+// cmd ('pcat','category');
+// cmd ('aca','academic');
+
+// cmd ('stitle','stitle');
+// cmd ('type','swc');
+// cmd ('cn','conferencename');
+// cmd ('scat','category');
+// cmd ('place','place');
+
+// cmd ('dat ','date');
+
+// cmd ('year_start','year_start');
+// cmd ('date_start','date_start');
+// cmd ('an','achievement_name');
+// cmd ('type','type');
+// cmd ('acat','category');
+// cmd ('rof','role_of_faculty');
+// cmd ('duration','duration'); -->
