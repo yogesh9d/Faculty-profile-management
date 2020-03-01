@@ -131,7 +131,7 @@ achievement_name = '$an',date_start = '$date_start',year_start = '$year_start',a
 <!--Create Edit form -->
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="1.css">
+<link rel="stylesheet" type="text/css" href="EditableForm.css">
 <body>
 
 <form method="post" class = "x" >
