@@ -106,14 +106,14 @@
                                             <h2 class=\"active\">Edit Profile</h2>
                                             <div class=\"transpose first\">
                                             <br>
-                                            <form method = \"post\" name = \"edit_profile_s\" id = \"edit_profile\" action = \"editableform.php\">
+                                            <form method = \"post\" name = \"edit_profile_s\" id = \"edit_profile\" action = \"AdminOptions.php\">
                                             <select id=\"profiles_list\" class=\"transpose first\" name = \"gmail\" >
                                         ";
                                         $query = "select gmail from profile;";
                                         $result = mysqli_query($connection,$query);
 
                                         while($row = mysqli_fetch_array($result))
-                                            echo"<option value=\"" . $row['gmail'] . "\">". $row['gmail'] ."</option>";
+                                            echo"<option name = gmail value=\"" . $row['gmail'] . "\">". $row['gmail'] ."</option>";
 
                                         echo"
                                             </select>
@@ -184,13 +184,15 @@
 
 
                                 }
-                                // else if(isset($_POST['edit_profile_sub_s'])){
-                                // }
+                                else if(isset($_POST['edit_profile_sub_s'])){
+                                    $_SESSION['gmail'] = $_POST['gmail'];
+                                    header('location:EditableForm.php');
+                                }
                             }
                         }
 
                         else{
-                            header('location:AdminLogin.php');
+                            header('location:Login.php');
 
                         }
 
