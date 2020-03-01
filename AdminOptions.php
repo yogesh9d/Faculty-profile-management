@@ -27,7 +27,7 @@
 
                             if(isset($_POST['sign_out_sub'])){
                                 session_destroy();
-                                header('location:Home.html');
+                                header('location:index.html');
 
                             }
 
