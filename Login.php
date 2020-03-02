@@ -89,8 +89,16 @@
 								$_SESSION['gmail'] = $_POST['login'];
 								if($_POST['login'] == 'admin')
 									redirect('AdminOptions.php');
-								else
+								else{
+									$query = "select * from profile where gmail = \"" . $_POST['login'] ."\" ;" ;
+									$result = mysqli_query($connection, "$query");
+
+									if($row = mysqli_fetch_array($result))
 									header('location:EditableForm.php');
+									else
+									header('location:ProfileDetails.html');
+
+								}
 
 							}
 						}

@@ -24,9 +24,19 @@ $result = mysqli_query($conn,$s);
 $num = mysqli_num_rows($result);
 if($num == 1){
     echo"username already taken";
-    header('location:home.html');
+    header('location:ProfileDetails.html');
 
 }
+
+$s = "select * from `profile` where gmail = '$gmail'";
+$result = mysqli_query($conn,$s);
+$num = mysqli_num_rows($result);
+
+if($num != 1){
+    echo"username unregistered";
+    header('location:ProfileDetails.html');
+}
+
 else{
     $reg = "insert into `profile`(name,gmail,designation,department,dob,qualification,phno,doj) values ('$fname','$gmail','$designation','$department','$dob','$qualification','$mobile','$doj')";
     mysqli_query($conn,$reg);
@@ -36,6 +46,6 @@ else{
     $reg2 = "insert into `specialization`(gmail,area_of_specialization,ug,pg) values ('$gmail','$areaofspec','$ug_taught','$postgrad')";
     mysqli_query($conn,$reg2);
 
-    header('Location:journalsandstudentsguided.php');
+    header('Location:JournalsAndStudentsGuided.php');
 }
 ?>
