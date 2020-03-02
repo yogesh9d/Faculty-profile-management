@@ -47,6 +47,8 @@ where profile.gmail = '$gmail'";
 //  $row2 = mysqli_fetch_array($result2);
  //echo $row;
 }
+
+
 //Update Information
 if(isset($_POST['btn-update'])){
 
@@ -232,23 +234,26 @@ achievement_name = '$an',date_start = '$date_start',year_start = '$year_start',a
          <label>Year</label><br>
     <input type="text" class="a" placeholder="  YYYY-YYYY" name="year_start" value="<?php echo $row['year_start']; ?>"><br><br>
         <label>Date:</label><br>
-    <input type="date" class="a" placeholder="" name="date_start" value="<?php echo $row['date_start']; ?>"><br><br>
+    <input type="date" class="a" placeholder="" name="date_start" value="<?php echo $row['date_start']; ?>"><br><label>
 
-    <label>Achievements:</label><label>
 
-    <!-- <label>Roles:</label><br>
-    <label>Journals:</label><br> -->
+    <label>Roles:</label><br>
+    <a href="role.php" target = "_blank"><button type="button" value="button">Add role</button></a>
+    <a href="DeleteRole.php" target = "_blank"><button type="button" value="button">Delete role</button></a>
+
     <label>Publications:</label><br>
-    <label>Workshop/conference</label><br>
+    <label>Workshop/conference:</label><br>
+    <label>Achievements:</label><br>
 
-    <label>Role of Faculty:</label><br>
-    <input type="text" class="a" placeholder="" name = "role_of_faculty" value="<?php echo $row['role_of_faculty']; ?>"><br><br>
+    <!-- <label>Role of Faculty:</label><br>
+    <input type="text" class="a" placeholder="" name = "role_of_faculty" value="<?php //echo $row['role_of_faculty']; ?>"><br><br>
     <label>Duration:</label><br>
-    <input type="number" class="a" placeholder="  Enter duration" name = "duration" value="<?php echo $row['duration']; ?>"><br><br>
+    <input type="number" class="a" placeholder="  Enter duration" name = "duration" value="<?php //echo $row['duration']; ?>"><br><br> -->
 
 
 <button type="submit" name="btn-update" id="btn-update" onClick="update()"><strong>Update</strong></button>
-<a href="disp.php"><button type="button" value="button">Cancel</button></a>
+
+<a href="logout.php"><button type="button" value="button">Cancel</button></a>
 </form>
 <!-- Alert for Updating -->
 <script>
@@ -262,6 +267,9 @@ function update(){
 </body>
 </html>
 <?php
+}
+else{
+    header('location:index.html');
 }
 ?>
 
