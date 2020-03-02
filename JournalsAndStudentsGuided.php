@@ -42,5 +42,6 @@
 </form>
     </div>
         <button class="ach"><a style="text-decoration: none;color: white;"href="Publications.php">Publications By Staff</a></button>
+        <button class="ach"><a class="hov" style="text-decoration: none;color: white;" href="logout.php">cancel</a></button>
     </body>
 </html>

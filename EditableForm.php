@@ -198,7 +198,7 @@ achievement_name = '$an',date_start = '$date_start',year_start = '$year_start',a
         <label>No.of books Published with Details</label><br>
     <input type="number" class="a " placeholder=""  name="noofbooks" value="<?php echo $row['noofbooks']; ?>" ><br><br>
 
-
+    <div hidden>
         <label>Title:</label><br>
     <input type="text" class="a" placeholder="" name="ptitle" value="<?php echo $row['ptitle']; ?>"><br><br>
          <label>conference/Journal Name:</label><br>
@@ -235,7 +235,7 @@ achievement_name = '$an',date_start = '$date_start',year_start = '$year_start',a
     <input type="text" class="a" placeholder="  YYYY-YYYY" name="year_start" value="<?php echo $row['year_start']; ?>"><br><br>
         <label>Date:</label><br>
     <input type="date" class="a" placeholder="" name="date_start" value="<?php echo $row['date_start']; ?>"><br><label>
-
+</div>
 
     <label>Roles:</label><br>
     <a href="role.php" target = "_blank"><button type="button" value="button">Add role</button></a>

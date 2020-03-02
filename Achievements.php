@@ -29,6 +29,7 @@
     <input type="text" class="a" placeholder="" name = "department"><br><br>
        <input type="submit" class="submit" value="submit" >
        <button class="ach1 ach2"><a style="text-decoration: none; color: white;" href="role.php">Roles </a></button>
+       <button class="ach"><a class="hov" style="text-decoration: none;color: white;" href="logout.php">cancel</a></button>
   <!-- <p style="font-size: 30px" >Registration's Last submission</p> -->
 
 

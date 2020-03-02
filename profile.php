@@ -24,18 +24,18 @@ $result = mysqli_query($conn,$s);
 $num = mysqli_num_rows($result);
 if($num == 1){
     echo"username already taken";
-    header('location:ProfileDetails.html');
+    header('location:index.html');
 
 }
 
-$s = "select * from `profile` where gmail = '$gmail'";
-$result = mysqli_query($conn,$s);
-$num = mysqli_num_rows($result);
+// $s = "select * from `profile` where gmail = '$gmail'";
+// $result = mysqli_query($conn,$s);
+// $num = mysqli_num_rows($result);
 
-if($num != 1){
-    echo"username unregistered";
-    header('location:ProfileDetails.html');
-}
+// if($num != 1){
+//     echo"username unregistered";
+//     header('location:ProfileDetails.html');
+// }
 
 else{
     $reg = "insert into `profile`(name,gmail,designation,department,dob,qualification,phno,doj) values ('$fname','$gmail','$designation','$department','$dob','$qualification','$mobile','$doj')";

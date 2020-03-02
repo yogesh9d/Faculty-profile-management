@@ -26,5 +26,6 @@
         <input type="submit" class="submit" value="Submit"><br>
         </form></div>
     <button class="ach ach1"><a style="text-decoration: none;color: white;"href="ConferenceWorkshops.php">Conferences/Workshops</a></button>
+    <button class="ach"><a class="hov" style="text-decoration: none;color: white;" href="logout.php">cancel</a></button>
 </body>
 </html>

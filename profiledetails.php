@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>registration form creation</title>    
+<title>registration form creation</title>
 <link rel="stylesheet" type="text/css" href="1.css">
 </head>
     <body>
@@ -11,10 +11,10 @@
     <h2>Enter your datails here</h2>
     <label>Faculty Name:</label>a<br>
     <input type="text" class="a" placeholder="  Enter Name" name = "name"><br><br>
-        
+
         <label>E-Mail ID</label><br>
     <input type="email" class="a" placeholder=" Enter email" name = "gmail" ><br><br>
-          <label> Mobile Number </label><br> 
+          <label> Mobile Number </label><br>
         <select id="ph">
         <option>+91</option>
         <option>+92</option>
@@ -35,19 +35,19 @@
     <input type="date" class="a"  name = "doj"><br><br>
 
     <label class="label label1">Previous Experience[Yrs]</label><br>
-     
+
      <label>Teaching</label><br>
     <input type="number" class="a"  placeholder="" name = "teaching_exp"><br><br>
     <label>Research</label><br>
     <input type="number" class="a"  placeholder="" name = "research_exp"> <br><br>
     <label>Industry</label><br>
-    <input type="number" class="a"  placeholder="" name = "industry_exp"> <br><br> 
+    <input type="number" class="a"  placeholder="" name = "industry_exp"> <br><br>
     <label>others</label><br>
     <input type="text" class="a"  placeholder="" name = "other_exp"> <br><br>
     <label>Area of Specialization</label><br>
     <input type="text" class="a b"  placeholder="" name = "area_of_specialization"> <br><br>
          <label class="label label1">Subjects Taught</label><br>
-    
+
          <label>UnderGraduate</label><br>
     <input type="text" class="a b"  placeholder="subjects taught in ug" name = "ug"> <br><br>
          <label>PostGraduate</label><br>
@@ -55,13 +55,14 @@
     <!-- <label>Upload-Image</label><br>
         <input type="file" name="filename" accept="image/gif, image/jpeg image/png"> -->
         <div class="sub">
-   
+
         <input type="submit" class="submit" value="submit">
-       </div>
-            </form>    
-    </div>
         
+       </div>
+            </form>
+    </div>
+
         <button class="ach"><a class="hov" style="text-decoration: none;color: white;"href="journalsandstudentsguided.php">Journals</a></button>
-          
+
     </body>
 </html>

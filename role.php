@@ -16,7 +16,7 @@
     <label>Duration:</label><br>
     <input type="number" class="a" placeholder="  Enter duration" name = "duration"><br><br>
 
-
+    <button class="ach"><a class="hov" style="text-decoration: none;color: white;" href="logout.php">cancel</a></button>
 
         <input type="submit" class="submit" value="submit">
        </div>
