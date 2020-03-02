@@ -13,6 +13,7 @@ mysqli_select_db($conn,'fpm');
 
 if($_SESSION['gmail']){
 $gmail = $_SESSION['gmail'];
+$_SESSION['gmail'] = $gmail;
 //  $gmail=$_POST['gmail'];
 //    echo $gmail;
 //  $sql = "SELECT * FROM profile WHERE gmail ='$gmail'";
@@ -233,7 +234,12 @@ achievement_name = '$an',date_start = '$date_start',year_start = '$year_start',a
         <label>Date:</label><br>
     <input type="date" class="a" placeholder="" name="date_start" value="<?php echo $row['date_start']; ?>"><br><br>
 
+    <label>Achievements:</label><label>
 
+    <!-- <label>Roles:</label><br>
+    <label>Journals:</label><br> -->
+    <label>Publications:</label><br>
+    <label>Workshop/conference</label><br>
 
     <label>Role of Faculty:</label><br>
     <input type="text" class="a" placeholder="" name = "role_of_faculty" value="<?php echo $row['role_of_faculty']; ?>"><br><br>
