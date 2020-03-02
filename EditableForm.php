@@ -240,11 +240,23 @@ achievement_name = '$an',date_start = '$date_start',year_start = '$year_start',a
     <label>Roles:</label><br>
     <a href="role.php" target = "_blank"><button type="button" value="button">Add role</button></a>
     <a href="DeleteRole.php" target = "_blank"><button type="button" value="button">Delete role</button></a>
-
+    <br>
+    <br>
     <label>Publications:</label><br>
+    <a href="Publications.php" target = "_blank"><button type="button" value="button">Add publication</button></a>
+    <a href="DeletePublications.php" target = "_blank"><button type="button" value="button">Delete publication</button></a>
+    <br>
+    <br>
     <label>Workshop/conference:</label><br>
+    <a href="ConferenceWorkshops.php" target = "_blank"><button type="button" value="button">Add workshop/conference</button></a>
+    <a href="DeleteConferenceWorkshops.php" target = "_blank"><button type="button" value="button">Delete workshop/conference</button></a>
+    <br>
+    <br>
     <label>Achievements:</label><br>
-
+    <a href="Achievements.php" target = "_blank"><button type="button" value="button">Add achievement</button></a>
+    <a href="DeleteAchievements.php" target = "_blank"><button type="button" value="button">Delete achievement</button></a>
+    <br>
+    <br>
     <!-- <label>Role of Faculty:</label><br>
     <input type="text" class="a" placeholder="" name = "role_of_faculty" value="<?php //echo $row['role_of_faculty']; ?>"><br><br>
     <label>Duration:</label><br>
